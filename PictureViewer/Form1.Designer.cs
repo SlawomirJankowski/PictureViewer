@@ -31,13 +31,13 @@
             this.btOpenFile = new System.Windows.Forms.Button();
             this.btClosePicture = new System.Windows.Forms.Button();
             this.lbPath = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.rtbImageProperties = new System.Windows.Forms.RichTextBox();
+            this.trbZoom = new System.Windows.Forms.TrackBar();
             this.lbZoom = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbImage = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trbZoom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,27 +75,27 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.rtbImageProperties.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.BackColor = System.Drawing.Color.LemonChiffon;
-            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.richTextBox1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.richTextBox1.HideSelection = false;
-            this.richTextBox1.Location = new System.Drawing.Point(12, 695);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(1160, 104);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
+            this.rtbImageProperties.BackColor = System.Drawing.Color.LemonChiffon;
+            this.rtbImageProperties.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rtbImageProperties.ForeColor = System.Drawing.Color.DarkBlue;
+            this.rtbImageProperties.HideSelection = false;
+            this.rtbImageProperties.Location = new System.Drawing.Point(12, 695);
+            this.rtbImageProperties.Name = "richTextBox1";
+            this.rtbImageProperties.ReadOnly = true;
+            this.rtbImageProperties.Size = new System.Drawing.Size(1160, 104);
+            this.rtbImageProperties.TabIndex = 4;
+            this.rtbImageProperties.Text = "";
             // 
             // trackBar1
             // 
-            this.trackBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.trackBar1.Location = new System.Drawing.Point(422, 13);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(355, 17);
-            this.trackBar1.TabIndex = 5;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            this.trbZoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.trbZoom.Location = new System.Drawing.Point(422, 13);
+            this.trbZoom.Name = "trackBar1";
+            this.trbZoom.Size = new System.Drawing.Size(355, 17);
+            this.trbZoom.TabIndex = 5;
+            this.trbZoom.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // lbZoom
             // 
@@ -110,12 +110,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(61, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1036, 529);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbImage.Location = new System.Drawing.Point(61, 34);
+            this.pbImage.Name = "pictureBox1";
+            this.pbImage.Size = new System.Drawing.Size(1036, 529);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImage.TabIndex = 0;
+            this.pbImage.TabStop = false;
             // 
             // panel1
             // 
@@ -124,7 +124,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pbImage);
             this.panel1.Location = new System.Drawing.Point(12, 88);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1159, 597);
@@ -138,8 +138,8 @@
             this.ClientSize = new System.Drawing.Size(1184, 811);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbZoom);
-            this.Controls.Add(this.trackBar1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.trbZoom);
+            this.Controls.Add(this.rtbImageProperties);
             this.Controls.Add(this.lbPath);
             this.Controls.Add(this.btClosePicture);
             this.Controls.Add(this.btOpenFile);
@@ -150,8 +150,8 @@
             this.Name = "Form1";
             this.Text = "Picture Viewer";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trbZoom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -163,10 +163,10 @@
         private System.Windows.Forms.Button btOpenFile;
         private System.Windows.Forms.Button btClosePicture;
         private System.Windows.Forms.Label lbPath;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.RichTextBox rtbImageProperties;
+        private System.Windows.Forms.TrackBar trbZoom;
         private System.Windows.Forms.Label lbZoom;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbImage;
         private System.Windows.Forms.Panel panel1;
     }
 }
