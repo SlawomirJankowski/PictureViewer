@@ -5,7 +5,7 @@ namespace PictureViewer
 {
     internal static class ImageInfo
     {
-        public static string PrintImageProperties(string imageLocationPath)
+        public static string ShowImageProperties(string imageLocationPath)
         {
             Image img = Image.FromStream(System.IO.File.OpenRead(imageLocationPath), false, false);
             ImageFormat format = img.RawFormat;

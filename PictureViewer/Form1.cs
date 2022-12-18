@@ -33,7 +33,7 @@ namespace PictureViewer
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            pbImage.ImageLocation = (AppSettings.LoadImageLocationProperty(Program._settingsFilePath));
+            pbImage.ImageLocation = AppSettings.LoadImageLocationProperty(Program.SettingsFilePath);
             if (pbImage.ImageLocation != null)
             {
                 pbImage.LoadCompleted += PboxPicture_LoadCompleted;
@@ -82,7 +82,7 @@ namespace PictureViewer
             lbZoom.ForeColor = Color.ForestGreen;
             btClosePicture.Visible = true;
             trbZoom.Enabled = true;
-            rtbImageProperties.Text = ImageInfo.PrintImageProperties(pbImage.ImageLocation);
+            rtbImageProperties.Text = ImageInfo.ShowImageProperties(pbImage.ImageLocation);
 
         }
 

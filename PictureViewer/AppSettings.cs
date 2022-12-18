@@ -6,7 +6,7 @@ namespace PictureViewer
     {
         public static void SaveImageLocationProperty(string imageLocation)
         {
-            File.WriteAllText(Program._settingsFilePath, imageLocation);
+            File.WriteAllText(Program.SettingsFilePath, imageLocation);
         }
 
         public static string LoadImageLocationProperty(string path)

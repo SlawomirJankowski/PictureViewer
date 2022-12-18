@@ -9,7 +9,7 @@ namespace PictureViewer
 {
     internal static class Program
     {
-        public static readonly string _settingsFilePath = Path.Combine(Environment.CurrentDirectory, "image_settings.txt");
+        public static readonly string SettingsFilePath = Path.Combine(Environment.CurrentDirectory, "image_settings.txt");
 
         /// <summary>
         /// The main entry point for the application.
